@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(./fieldBG.jpeg) no-repeat center center/cover fixed;
+  width: 100vw;
+  font-family: 'Courier New', Courier, monospace;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem auto;
+  font-size: 3rem;
+  color: black;
+}
+
+h2 {
+  color: black;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1260px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  height: 475px;
+  align-items: center;
+  background-color: antiquewhite;
+  margin: 0.5rem;
+  border-radius: 2rem;
+  position: relative;
+}
+
+.card .pokemonName {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-end;
+  border-radius: 0 0 1rem 1rem;
+  height: 4rem;
+  position: absolute;
+  bottom: 0;
+  color: white;
+}
+
+.card img {
+  filter: opacity(0.6);
+  justify-items: center;
+  align-items: center;
+  max-width: 400px;
+  max-height: calc(400px - 4rem);
+}
+
+.card h4 {
+  color: black;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+
+.bigBox {
+  max-width: 1260px;
+}
+
+input[type='radio'] {
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  cursor: pointer;
+  margin: 1px;
+}
+
+label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  color: black;
+}
+
+input[type='radio']:checked+label {
+  background-color: #ffffff;
+  border-radius: 2rem;
+}
+
+input[type='text'] {
+  display: flex;
+  width: 300px;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+
+.radioBtns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
