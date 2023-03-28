@@ -79,11 +79,25 @@ form {
   max-height: calc(400px - 4rem);
 }
 
-.card h4 {
+.card .types {
   color: black;
   position: absolute;
-  top: 0;
+  top: 1rem;
   right: 1rem;
+}
+
+.typeBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.typeBox img {
+  width: 40px;
+}
+
+.types img {
+  width: 40px;
+  height: 40px;
 }
 
 .bigBox {

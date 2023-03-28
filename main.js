@@ -1,5 +1,7 @@
 const inputs = document.querySelectorAll('.radioBtns input')
 const search = document.querySelector('#search')
+const pokeTypeRadio = document.querySelectorAll('.typeBox input')
+
 
 let offset = 0
 let limit = 0
@@ -109,10 +111,71 @@ function pokeSearch(searchValue) {
   openCards(filterList)
 }
 
-const changeTypeIcon = () => {
-  switch (document.querySelector('.types h4').textContent) {
+const typeFilter = (data) => {
+
+
+
+  openCards(filteredList)
+}
+
+
+
+const changeTypeIcon = (type) => {
+
+  switch (type) {
+    case 'bug':
+      return '<img src="./icons/bug.png" alt="Type of pokemon">'
+      break;
+    case 'dark':
+      return '<img src="./icons/dark.png" alt="Type of pokemon">'
+      break;
+    case 'dragon':
+      return '<img src="./icons/dragon.png" alt="Type of pokemon">'
+      break;
+    case 'electric':
+      return '<img src="./icons/electric.png" alt="Type of pokemon">'
+      break;
+    case 'fairy':
+      return '<img src="./icons/fairy.png" alt="Type of pokemon">'
+      break;
+    case 'fighting':
+      return '<img src="./icons/fighting.png" alt="Type of pokemon">'
+      break;
+    case 'fire':
+      return '<img src="./icons/fire.png" alt="Type of pokemon">'
+      break;
+    case 'flying':
+      return '<img src="./icons/flying.png" alt="Type of pokemon">'
+      break;
+    case 'ghost':
+      return '<img src="./icons/ghost.png" alt="Type of pokemon">'
+      break;
     case 'grass':
-      return document.querySelector('.types h4').textContent = url('./icons/grass.png')
+      return '<img src="./icons/grass.png" alt="Type of pokemon">'
+      break;
+    case 'ground':
+      return '<img src="./icons/ground.png" alt="Type of pokemon">'
+      break;
+    case 'ice':
+      return '<img src="./icons/ice.png" alt="Type of pokemon">'
+      break;
+    case 'normal':
+      return '<img src="./icons/normal.png" alt="Type of pokemon">'
+      break;
+    case 'poison':
+      return '<img src="./icons/poison.png" alt="Type of pokemon">'
+      break;
+    case 'psychic':
+      return '<img src="./icons/psychic.png" alt="Type of pokemon">'
+      break;
+    case 'rock':
+      return '<img src="./icons/roock.png" alt="Type of pokemon">'
+      break;
+    case 'steel':
+      return '<img src="./icons/steel.png" alt="Type of pokemon">'
+      break;
+    case 'water':
+      return '<img src="./icons/water.png" alt="Type of pokemon">'
       break;
 
     default:
@@ -120,14 +183,17 @@ const changeTypeIcon = () => {
   }
 }
 
+
 const openCards = (data) => {
   document.querySelector('.box').innerHTML = data.map((pokemon, i) => {
-    return `<div class="card"> <div class="types"><h4>
-      ${pokemon.types.map((item, i) => { return `${item.type.name}` })}
-    </h4></div><img src="${pokemon.sprites.other.dream_world.front_default}"/> <div class="pokemonName"><h3>#${pokemon.id}, ${pokemon.name} </h3> </div></div>`
+    return `<div class="card"> <div class="types">
+      ${pokemon.types.map((item, i) => { return `${changeTypeIcon(item.type.name)}` }).join(' ')}</div> 
+      <img src="${pokemon.sprites.other.dream_world.front_default}"/> <div class="pokemonName"><h3>#${pokemon.id}, ${pokemon.name} </h3> </div></div>`
   }).join('')
   changeTypeIcon()
 }
+
+
 
 
 search.addEventListener('input', searchKey)
