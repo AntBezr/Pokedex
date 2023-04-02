@@ -21,6 +21,7 @@ Live page [here](https://public.bc.fi/s2300093/pokedex/)
 
 ## Screenshot
 
+<img width="1678" alt="Screenshot 2023-04-02 at 13 23 13" src="https://user-images.githubusercontent.com/117649417/229347247-e21f6172-f4e0-4e3b-899c-8ebb2aa243e2.png">
 ## Sources
 
 - [PokeApi](https://pokeapi.co/)
