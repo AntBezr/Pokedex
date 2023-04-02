@@ -1,6 +1,7 @@
 # Pocedex
 
-Pocedex is a webPage for studies of cards with pokemons.
+Pocedex is a web page project in vanilla JS for course studies.
+Web page shows pokemons in chosen generation(1-9)
 Cards are created by using pokeApi.
 
 ## Technologies used
@@ -13,7 +14,10 @@ Built with:
 
 ## Setup and usage
 
-Live page [here](https://github.com/m)
+Choose the generation of pokemon and the page will show all pokemons of this generation.
+Additionally if you looking for certain pokemon you can filter them by type or type its name in search bar
+
+Live page [here](https://public.bc.fi/s2300093/pokedex/)
 
 ## Screenshot
 

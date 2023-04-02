@@ -71,7 +71,7 @@ form {
   color: white;
 }
 
-.card img {
+.pokePic{
   filter: opacity(0.6);
   justify-items: center;
   align-items: center;
@@ -79,6 +79,13 @@ form {
   max-height: calc(400px - 4rem);
 }
 
+ .pokePic:hover{
+  z-index: 2;
+  filter: none;
+  min-width: 500px;
+  min-height: calc(500px - 4rem);
+}
+ 
 .card .types {
   color: black;
   position: absolute;
@@ -89,6 +96,12 @@ form {
 .typeBox {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  visibility: hidden;
+  margin: 1rem;
+  color: black;
 }
 
 .typeBox img {
@@ -110,6 +123,17 @@ input[type='radio'] {
   visibility: hidden;
   cursor: pointer;
   margin: 1px;
+}
+.greeting{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh - 30rem);
+}
+.greeting h2{
+  text-align: center;
+  font-size: 3rem;
 }
 
 label {
@@ -143,3 +167,63 @@ input[type='text'] {
   justify-content: center;
   align-items: center;
 }
+
+.searchBox{
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  align-items: center;
+  color: black;
+  visibility: hidden;
+}
+
+
+@media (max-width: 600px) {
+  .greeting{
+    height: calc(100vh - 15rem);
+  }
+  .greeting h2{
+    font-size: 2rem;
+  }
+  .card {
+    width: 325px;
+    height: 475px;
+  }
+  form {
+    flex-wrap: wrap;
+  }
+  .searchBox {
+    width: 350px;
+  }
+  
+  .typeBox{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  input[type='text'] {
+    width: 200px;
+}
+.pokePic{
+  max-width: 300px;
+  max-height: calc(300px - 4rem);
+}
+.pokePic:hover{
+  min-width: 375px;
+  min-height: calc(375px - 4rem);
+}
+}
+
+
+
+@media screen and (max-width: 900px) {
+  .card {
+  flex-wrap: wrap;
+}
+.typeBox{
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+}
+
