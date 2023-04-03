@@ -101,7 +101,7 @@ const searchKey = (e) => {
   if (e == undefined){
     searchValue = ''
   } else {
-    searchValue = e.target.value;
+    searchValue =  e.target.value;
   }
   searchLength = searchValue.length;
 pokeSearch(searchValue)
@@ -118,7 +118,7 @@ function pokeSearch(searchValue) {
 
   
   filterSearch = searchLength >= 0 ? Pokemons.filter(pokemon => {
-    return pokemon.name.toLowerCase().includes(searchValue);
+    return pokemon.name.toLowerCase().includes(searchValue.toLowerCase());
   })
     : Pokemons;
     typePokeSearch(filterSearch)
