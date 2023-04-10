@@ -1,4 +1,4 @@
-# Pocedex
+# Pokedex
 
 Pocedex is a web page project in vanilla JS for course studies.
 Web page shows pokemons in chosen generation(1-9)
